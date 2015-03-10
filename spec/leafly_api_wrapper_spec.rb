@@ -1,13 +1,37 @@
 require 'spec_helper'
 
 describe LeaflyApiWrapper do
-  it 'should be configurable with a block' do
+  before do
     LeaflyApiWrapper.configure do |config|
-      config.api_key = 'test'
-      config.api_id  = 'loto'
+      config.api_key = 'MY_API_KEY'
+      config.api_id  = 'MY_API_ID'
     end
+  end
 
-    expect(LeaflyApiWrapper.configuration.api_key).to eq('test')
-    expect(LeaflyApiWrapper.configuration.api_key).to eq('loto')
+  it 'should be configurable with a block' do
+    expect(LeaflyApiWrapper.configuration.api_key).to eq('MY_API_KEY')
+    expect(LeaflyApiWrapper.configuration.api_id).to eq('MY_API_ID')
+  end
+
+  it 'should set the default base url to the config' do
+    expect(LeaflyApiWrapper.configuration.base_url).to eq('http://data.leafly.com/')
+  end
+
+  it 'should get 10 places near' do
+    VCR.use_cassette('locations_near_point') do
+      res = LeaflyApiWrapper::Location.near(33.749, -117.874, take: 10)
+      expect(res.count).to eq(11)
+    end
+  end
+
+  it 'should get location details' do
+    VCR.use_cassette('locations_detail') do
+      location = LeaflyApiWrapper::Location.get('denver-relief')
+
+      expect(location).to be_a(LeaflyApiWrapper::Location)
+      expect(location.name).to eq('Denver Relief')
+      expect(location.slug).to eq('denver-relief')
+      expect(location.address).to eq('1 Broadway Suite A-150')
+    end
   end
 end

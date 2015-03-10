@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Oscar Siniscalchi"]
   spec.email         = ["oscarsiniscalchi@gmail.com"]
   spec.summary       = %q{An api wrapper for leapfly api}
-  spec.description   = %q{A wrapper to interact with leapfly api locations and strains}
-  spec.homepage      = ""
+  spec.description   = %q{A simple API ruby wrapper to interact with leapfly api locations}
+  spec.homepage      = "https://github.com/oscarsiniscalchi/leafly_api_wrapper"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
+  spec.add_development_dependency "byebug"
 
   spec.add_dependency "faraday"
   spec.add_dependency "json"

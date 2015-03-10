@@ -19,17 +19,43 @@ Or install it yourself as:
 
 ## Usage
 
-### Locations
+### Configure
 
   ``` ruby
-  leafly = LeaflyApiWrapper.new()
-  leafly.configure do |conf|
-    conf.api_key = 'YOURAPIKEY'
-    conf.api_ID  = 'YOURAPIID'
+  # This could go on a rails initializer
+  LeaflyApiWrapper.configure do |config|
+    config.api_key = 'MY_API_KEY'
+    config.api_id  = 'MY_API_ID'
   end
+  ```
 
-  leafly.all_locations_near(lat: '-45.231', lon: '35.123')
+### Locations
 
+The Location.near method allows you to search locations near a latitude and
+longitude, it also allows you to send an additional parameter with options to
+refine your search. Available options are:
+
+ take               Number of results per page (MAX 50)
+ page               The page of the results, 0 by default
+ storefront		      Only return results with physical locations
+ delivery		        Only return delivery services
+ retail		          Only return retail locations (for CO & WA)
+ medical		        Only return medical dispensaries
+ creditcards		    Return locations that accept credit cards on site
+ hasclones		      Only locations with clones available
+ hasconcentrates		Only locations with concentrates on the menu
+ hasedibles		      Only locations with edibles on the menu
+ veterandiscount		Only locations that offer a discount for veterans
+
+See more info at leafly api documentation at ( https://developer.leafly.com/docs )
+
+  ```ruby
+  response = LeaflyApiWrapper::Location.near(33.749, -117.874, take: 10)
+  ```
+Or you can get an specific result with Location.get method  
+
+  ```ruby
+  response = LeaflyApiWrapper::Location.get('dispensary-slug')
   ```
 
 ## Contributing
