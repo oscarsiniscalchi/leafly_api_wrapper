@@ -24,5 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'webmock', '~> 0'
 
   spec.add_dependency 'faraday', '~> 0'
-  spec.add_dependency 'json', '~> 0'
+  spec.add_dependency 'json', '~> 1'
 end
