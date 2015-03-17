@@ -24,6 +24,13 @@ describe LeaflyApiWrapper do
     end
   end
 
+  it 'should set the address' do
+    VCR.use_cassette('locations_near_point') do
+      res = LeaflyApiWrapper::Location.near(33.749, -117.874, take: 10)
+      expect(res.first.address).to eq('Lake Forest,CA')
+    end
+  end
+
   it 'should get location details' do
     VCR.use_cassette('locations_detail') do
       location = LeaflyApiWrapper::Location.get('denver-relief')

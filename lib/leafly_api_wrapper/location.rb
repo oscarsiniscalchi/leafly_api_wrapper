@@ -12,10 +12,11 @@ module LeaflyApiWrapper
       :customMarker, :customMarker2x, :mapMarker, :specials
 
     def initialize(data)
-      @id = data['id']
+      @id      = data['id']
       @name    = data['name']
       @slug    = data['slug']
-      @address = "#{data['address1']} #{data['address2']}"
+      @address = "#{data['address1']} #{data['address2']}".strip
+      @address = "#{data['address']} #{data['locationLabel']}".strip if @address.empty?
       @hours = data['hours']
       @phone = data['phone']
       @locationLabel = data['locationLabel']
