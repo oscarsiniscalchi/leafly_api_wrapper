@@ -3,14 +3,14 @@ require 'spec_helper'
 describe LeaflyApiWrapper do
   before do
     LeaflyApiWrapper.configure do |config|
-      config.api_key = 'MY_API_KEY'
-      config.api_id  = 'MY_API_ID'
+      config.api_id  = 'LEAFLY_API_ID'
+      config.api_key = 'LEAFLY_API_KEY'
     end
   end
 
   it 'should be configurable with a block' do
-    expect(LeaflyApiWrapper.configuration.api_key).to eq('MY_API_KEY')
-    expect(LeaflyApiWrapper.configuration.api_id).to eq('MY_API_ID')
+    expect(LeaflyApiWrapper.configuration.api_key).to eq('LEAFLY_API_KEY')
+    expect(LeaflyApiWrapper.configuration.api_id).to eq('LEAFLY_API_ID')
   end
 
   it 'should set the default base url to the config' do

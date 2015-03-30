@@ -4,53 +4,52 @@ require "json"
 
 module LeaflyApiWrapper
   class Location
-    attr_reader :id, :name, :slug, :hours, :phone, :address, :locationLabel,
-      :delivery, :storefront, :lastMenuUpdate, :latitude, :longitude, :rating,
-      :numReviews, :sponsor, :ada, :creditCards, :atm, :marquee, :coverPhoto,
-      :logoId, :logo, :medical, :retail, :price1, :price2, :price3,
-      :mapMarkerLevel, :canadaLP, :tagLine, :permalink, :starImage,
-      :customMarker, :customMarker2x, :mapMarker, :specials
+    attr_reader :id, :slug, :name, :desription, :tagLine, :tagLineBlurb,
+                :address, :city, :state, :zip,
+                :phone, :hours, :website, :latitude, :longitude,
+                :logo, :photos, :permalink, :specials,
+                :atm, :creditCards, :veteranDiscount, :delivery,
+                :retail, :medical, :storefront, :ada, :canadaLP,
+                :facebookUrl, :twitterUrl, :googlePlusUrl,
+                :pinterestUrl, :tumblrUrl, :instagramUrl
+
 
     def initialize(data)
-      @id      = data['id']
-      @name    = data['name']
-      @slug    = data['slug']
-      @address = "#{data['address1']} #{data['address2']}".strip
-      @address = "#{data['address']} #{data['locationLabel']}".strip if @address.empty?
-      @hours = data['hours']
-      @phone = data['phone']
-      @locationLabel = data['locationLabel']
+      @id = data['id']
+      @slug = data['slug']
+      @name = data['name']
+      @atm = data['atm']
+      @creditCards = data['creditCards']
+      @veteranDiscount = data['veteranDiscount']
+      @ada = data['ada']
       @delivery = data['delivery']
+      @retail = data['retail']
+      @medical = data['medical']
       @storefront = data['storefront']
-      @lastMenuUpdate = data['lastMenuUpdate']
+      @logo = data['logo']
+      @address = data['address']
+      @city = data['city']
+      @state = data['state']
+      @zip = data['zip']
+      @phone = data['phone']
+      @hours = data['hours']
+      @website = data['website']
+      @desription = data['desription']
       @latitude = data['latitude']
       @longitude = data['longitude']
-      @rating = data['rating']
-      @numReviews = data['numReviews']
-      @sponsor = data['sponsor']
-      @ada = data['ada']
-      @creditCards = data['creditCards']
-      @atm = data['atm']
-      @marquee = data['marquee']
-      @coverPhoto = data['coverPhoto']
-      @logoId = data['logoId']
-      @logo = data['logo']
-      @medical = data['medical']
-      @retail = data['retail']
-      @price1 = data['price1']
-      @price2 = data['price2']
-      @price3 = data['price3']
-      @mapMarkerLevel = data['mapMarkerLevel']
+      @photos = data['photos']
+      @permalink = data['permalink']
       @canadaLP = data['canadaLP']
       @tagLine = data['tagLine']
-      @permalink = data['permalink']
-      @starImage = data['starImage']
-      @customMarker = data['customMarker']
-      @customMarker2x = data['customMarker2x']
-      @mapMarker = data['mapMarker']
+      @tagLineBlurb = data['tagLineBlurb']
+      @facebookUrl = data['facebookUrl']
+      @twitterUrl = data['twitterUrl']
+      @googlePlusUrl = data['googlePlusUrl']
+      @pinterestUrl = data['pinterestUrl']
+      @tumblrUrl = data['tumblrUrl']
+      @instagramUrl = data['instagramUrl']
       @specials = data['specials']
     end
-
 
     def self.near(lat, lon, options = {})
       response = connection.post '/locations', {
@@ -60,14 +59,17 @@ module LeaflyApiWrapper
         longitude: lon
       }.merge(options)
 
-      JSON.parse(response.body)['stores'].collect do |data|
+      JSON.parse(response.body)['stores'].collect do |raw_data|
+        data = LeaflyApiWrapper::Mapper.new(raw_data, 'location_search').mapped
         new(data)
       end
     end
 
     def self.get(slug)
       res = connection.get "/locations/#{slug}"
-      new(JSON.parse(res.body))
+      raw_data = JSON.parse(res.body)
+      data = LeaflyApiWrapper::Mapper.new(raw_data, 'location_detail').mapped
+      new(data)
     end
 
     private

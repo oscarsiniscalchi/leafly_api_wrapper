@@ -1,6 +1,7 @@
 require "leafly_api_wrapper/version"
 require "leafly_api_wrapper/configuration"
 require "leafly_api_wrapper/location"
+require "leafly_api_wrapper/mapper"
 
 module LeaflyApiWrapper
   class << self

@@ -1,0 +1,117 @@
+{
+ "id": 1358,
+ "slug": "denver-relief",
+ "name": "Denver Relief",
+ "atm": false,
+ "creditCards": false,
+ "veteranDiscount": true,
+ "ada": true,
+ "isInfoOnlyListing": false,
+ "delivery": false,
+ "retail": true,
+ "medical": true,
+ "storefront": true,
+ "specials": true,
+ "specialsCount": 8,
+ "logo": "",
+ "address1": "1 Broadway",
+ "address2": "Suite A-150",
+ "city": "Denver",
+ "state": "CO",
+ "zip": "80203",
+ "phone": "303-420-6337",
+ "validPhone": true,
+ "approved": true,
+ "hours": "Daily: 8am-6:45pm",
+ "website": "http://www.denverrelief.com",
+ "blurb": "Debit cards and cash only accepted here\nWinner of the 2013 U.S. Cannabis Cup \"Best Hybrid\" for OG 18, we also stock the following award winners: Bio-Diesel, Outer Space, Ultimate '91 ChemDawg, and Reserva Privada. \nDenver Relief is a wellness and medical marijuana center dedicated to assisting people with making positive and natural changes in their lives.\nEstablished 2009. \n\n\n\nOn the web • Facebook • Twitter • YouTube\n",
+ "lastMenuUpdate": "/Date(1427488381107)/",
+ "rating": 4.5,
+ "meds": 4.5,
+ "service": 4.5,
+ "atmosphere": 4.5,
+ "followerCount": 569,
+ "reviewCount": 99,
+ "latitude": 39.7168451,
+ "longitude": -104.9877644,
+ "photos": [
+  "http://leaflystatic.blob.core.windows.net/dispensary-photos/denver-relief_320x240_b93a.jpg",
+  "http://leaflystatic.blob.core.windows.net/dispensary-photos/denver-relief_320x240_467c.jpg",
+  "http://leaflystatic.blob.core.windows.net/dispensary-photos/denver-relief_320x240_9b1d.jpg"
+ ],
+ "photoCount": 65,
+ "permalink": "http://www.leafly.com/dispensary-info/denver-relief",
+ "menu": false,
+ "canadaLP": false,
+ "coverPhoto": "http://d3odcnigi1nnzz.cloudfront.net/i/1891/w680/h340/crop",
+ "tagLine": null,
+ "tagLineBlurb": null,
+ "facebookUrl": null,
+ "twitterUrl": null,
+ "googlePlusUrl": null,
+ "pinterestUrl": null,
+ "tumblrUrl": null,
+ "instagramUrl": null,
+ "starImage": "http://d3odcnigi1nnzz.cloudfront.net/stars/4.5/240?color=fcc91d",
+ "specialsList": [
+  {
+   "title": "Daily",
+   "details": "Buy 5 get 1 free on edibles and pre-rolls",
+   "finePrint": "The lowest priced item will be free with the purchase of 5."
+  },
+  {
+   "title": "Monday Edible Deal",
+   "details": "10% off all edibles on Monday",
+   "finePrint": "Munchies Monday"
+  },
+  {
+   "title": "Fat Tuesday",
+   "details": "Your first eighth is weighed heavy today!",
+   "finePrint": "Only valid with purchase of a minimum of an eight."
+  },
+  {
+   "title": "Wax Wednesday ",
+   "details": "50% off your first gram of SCE!",
+   "finePrint": "Only valid on one gram. All additional grams are at full price."
+  },
+  {
+   "title": "Wax Weekends!",
+   "details": "50% off your first gram of SCE!!",
+   "finePrint": "Only valid on one gram. All additional grams are at full price."
+  },
+  {
+   "title": "Sunday Funday",
+   "details": "Your first eight will be weighed heavy.",
+   "finePrint": "Only valid with minimum purchase of an eighth."
+  },
+  {
+   "title": "First time patients",
+   "details": "Spend $30 or more and receive $15 off.",
+   "finePrint": "Offer not valid on O.pen pens or cartridges. "
+  },
+  {
+   "title": "Monday Vapeday",
+   "details": "10% off all vaporizers and vaporizer accessories. ",
+   "finePrint": "Including the o.pens and o.pen cartridges!"
+  }
+ ],
+ "recentReviews": [
+  {
+   "username": "tCo27",
+   "starImage": "http://d3odcnigi1nnzz.cloudfront.net/stars/5/240?color=fcc91d",
+   "comments": ""
+  },
+  {
+   "username": "g.kirk",
+   "starImage": "http://d3odcnigi1nnzz.cloudfront.net/stars/5/240?color=fcc91d",
+   "comments": "I found DR online in a high times review and decided to pop in today. Their location is clean and in a relatively upscale spot. Everyone was really professional and you could tell that they actually cared about their customers. The prices are really low compared to my old spot, it may have something to do with the fact DR doesn't package their product in the medicine bottle, they use bags and at first it kind of bugged me but after trying their bud and seeing that it really is the best around I think I can deal with it. I bought HP-13, OG-18, Reserva Privada, Gumbo, Bio-Diesel and Outer Space. So far I've had Outer Space and its exactly what the name says. Sorry if this review is all over the place but my brain and OS are duking it out right now. Just go in and grab a few grams and see what the buzz is about."
+  },
+  {
+   "username": "lostsheep",
+   "starImage": "http://d3odcnigi1nnzz.cloudfront.net/stars/1.66666663/240?color=fcc91d",
+   "comments": "Strains were there, but as a medical customer it was a total rip off. Rec has made it difficult to find high quality affordable meds- and Denver Relief is the prime example of over inflating prices to take advantage of legalization AND their customers. Even though we were the ONLY people there we sat in the waiting room for 10+ minutes listening to the guy who helped us joke. Staff is pretentious and throw every gimmick sales pitch at you they have. \"One of Denvers oldest\", but not finest. "
+  }
+ ],
+ "updates": [],
+ "updateCount": 0
+}

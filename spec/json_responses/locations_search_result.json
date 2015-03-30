@@ -1,0 +1,53 @@
+{
+   "id": 92523,
+   "name": "Green Life - Bellevue",
+   "slug": "green-life---bellevue",
+   "hours": "7AM - 1AM 7 Days A Week!",
+   "phone": "425-298-7528",
+   "address": "Test",
+   "locationLabel": "Kirkland,WA",
+   "delivery": true,
+   "storefront": false,
+   "lastMenuUpdate": "/Date(1427337347541)/",
+   "latitude": 47.711573,
+   "longitude": -122.203949,
+   "rating": 4.5,
+   "numReviews": 65,
+   "sponsor": true,
+   "ada": true,
+   "creditCards": true,
+   "atm": false,
+   "marquee": true,
+   "coverPhoto": "http://d3odcnigi1nnzz.cloudfront.net/i/13223/w640/h320/crop",
+   "logoId": 20353,
+   "logo": "http://d3odcnigi1nnzz.cloudfront.net/i/20353/w64/h64",
+   "medical": true,
+   "retail": false,
+   "price1": false,
+   "price2": true,
+   "price3": false,
+   "mapMarkerLevel": 3,
+   "canadaLP": false,
+   "tagLine": "So fast you'll see smoke!",
+   "permalink": "http://www.leafly.com/dispensary-info/green-life---bellevue",
+   "starImage": "http://d3odcnigi1nnzz.cloudfront.net/stars/4.5/240?color=fcc91d",
+   "customMarker": "http://leaflystatic.blob.core.windows.net/files/glo2_ba90.png",
+   "customMarker2x": "http://leaflystatic.blob.core.windows.net/files/glo2_deb4.png",
+   "mapMarker": "http://leaflystatic.blob.core.windows.net/files/glo2_ba90.png",
+   "specials": [
+    {
+     "id": -27956883,
+     "title": "Ask us about our specials",
+     "details": "Call or text your order today! Please don't forget to ask about the daily special & bookmark our website at https://www.igreenlife.org/deals.html to see the latest products/ deals every day!",
+     "finePrint": "Limited to 1 offer per customer per day",
+     "permalink": "http://www.leafly.com/dispensary-info/green-life---bellevue/specialsprint?sid=-27956883"
+    },
+    {
+     "id": -1865301558,
+     "title": "1 Free THC Ball",
+     "details": "Special - 1 Free THC Peanut Butter Chocolate Covered Ball (Contains 20mg THC & Very Strong CBD High) with $75 donation ",
+     "finePrint": "Limited to 1 offer per customer per day",
+     "permalink": "http://www.leafly.com/dispensary-info/green-life---bellevue/specialsprint?sid=-1865301558"
+    }
+   ]
+}
