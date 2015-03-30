@@ -6,7 +6,8 @@ module LeaflyApiWrapper
     attr_accessor :mapper, :data
 
     def initialize(data, feed_type)
-      @mapper = JSON.parse(File.read("./lib/leafly_api_wrapper/feed_mapper/#{feed_type}_mapper.json"))
+      path = File.expand_path("../feed_mapper/#{feed_type}_mapper.json", __FILE__)
+      @mapper = JSON.parse(File.read(path))
       @data   = data
     end
 

@@ -13,7 +13,6 @@ module LeaflyApiWrapper
                 :facebookUrl, :twitterUrl, :googlePlusUrl,
                 :pinterestUrl, :tumblrUrl, :instagramUrl
 
-
     def initialize(data)
       @id = data['id']
       @slug = data['slug']
